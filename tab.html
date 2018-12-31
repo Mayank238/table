@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+	<label style="margin-left: 20px;">row:</label>
+	<input type="number" id="row" name="">
+	<br>
+	<br>
+	<label>column:</label>
+	<input type="number" id="col" name="">
+	<br>
+	<br>
+	<button type="submit" onclick="table();">submit</button>
+	<p id="demo"></p>
+    </center>
+    <script type="text/javascript">
+    	function table() {
+    		var x=document.getElementById('row').value;
+    		var y=document.getElementById('col').value;
+    		var count=1;
+            var text="";
+    		// document.getElementById("demo").innerHTML=x+" "+y;
+    		text+="<table border='solide'>"
+    		  for (var i = 0; i < x ;i++) {
+    		  	  text+="<tr>";
+    		  	  for (var j = 0; j < y; j++) {
+    		  	  	text+="<td>"+count+"</td>";
+    		  	  	count++;
+    		  	  }
+    		  	  text+="</tr>";
+    		  }
+    		  text+="</table>";
+              document.getElementById('demo').innerHTML=text;
+    	}
+    	
+    </script>
+
+</body>
+</html>
